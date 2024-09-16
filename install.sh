@@ -36,8 +36,8 @@ echo "secret-key:$NEW_UUID" >> $project_root/Resources/Guacamole/guacamole.prope
 
 # modify guacamole war file
 cd $project_root/Resources
-wget http://apache.spinellicreations.com/guacamole/1.2.0/binary/guacamole-1.2.0.war
-unzip guacamole-1.2.0.war -d edits/
+wget https://apache.org/dyn/closer.lua/guacamole/1.5.5/binary/guacamole-1.5.5.war?action=download -O guacamole-1.5.5.war
+unzip guacamole-1.5.5.war -d edits/
 cd edits
 
 sed -i -e 's/\.localStorage/.sessionStorage/g' guacamole.js
